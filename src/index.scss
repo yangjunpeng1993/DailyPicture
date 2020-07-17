@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Kai';
-    src: url("./fonts/Kai.ttf") format("truetype");
+    src: url("fonts/Kai.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'HanaMinA';
-    src: url("./fonts/HanaMinA.ttf") format("truetype");
+    src: url("fonts/HanaMinA.ttf") format("truetype");
 }
 
 html {
@@ -35,7 +35,7 @@ body {
         background-color: rgba(2,3,5,0.15);
         .time {
             text-align: center;
-            font-family: 'HanaMinA', 'Kai';
+            font-family: 'Kai','HanaMinA';
             font-weight: bold;
             font-size: 60px;
             letter-spacing: 3px;
