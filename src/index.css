@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Kai';
+  src: url("./font/Kai.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HanaMinA';
+  src: url("./font/HanaMinA.ttf") format("truetype");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 960px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container {
+  background-image: url(https://images.pexels.com/photos/4603879/pexels-photo-4603879.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.container .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 102px 96px;
+  background-color: rgba(2, 3, 5, 0.15);
+}
+
+.container .cover .time {
+  text-align: center;
+  font-family: 'HanaMinA', 'Kai';
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.container .cover .time span {
+  font-size: 80px;
+}
+
+.container .cover .subcontent {
+  display: block;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.container .cover .subcontent span {
+  padding: 10px 25px;
+  text-align: center;
+  font-family: 'Kai','Heiti SC';
+  font-size: 28px;
+  letter-spacing: 4px;
+  background-color: #ffcc01;
+  color: #555555;
+}
+
+.input-view {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.input-view label {
+  margin-left: 10px;
+}
+
+.input-view input {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.input-view button {
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid;
+  padding: 4px;
+}
+/*# sourceMappingURL=index.css.map */

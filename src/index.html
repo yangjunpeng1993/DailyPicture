@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日一图</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+   <div class="container">
+       <div class="cover">
+            <div class="main">
+                <p class="time">倒计时 <span class="day">168</span> 天</p>
+                <div class="subcontent">
+                    <span>发愤识遍天下字，立志读尽人间书。--- 苏轼</span>
+                </div>
+                
+            </div>
+       </div>
+   </div> 
+
+   <div class="input-view">
+       <div>
+            <label for="content">句子</label>
+            <input class="input-content" type="text" />
+       </div>
+
+       <div>
+            <label for="img">图片链接</label>
+            <input class="input-img-url" type="text" />
+       </div>
+
+
+       <div>
+           <label id="select-local-image"> 选择本地图片: </label>
+           <input type="file" onchange="selectImage(this)"/>
+       </div>
+
+       <button id="download">下载图片</button>
+
+   </div>  
+
+   <script type="text/javascript" src="js/index.js" />
+</body>
+</html>
