@@ -1,7 +1,6 @@
 document.write("<script type='text/javascript' src='html2canvas.js'></script>");
 
 window.onload = function() {
-    console.log('hello')
     let t1 = "2021/01/01 00:00:00";
     let dateEnd = new Date(t1);
     let dateBegin = new Date();
@@ -25,10 +24,10 @@ window.onload = function() {
         img.style.backgroundImage = 'url('+ e.target.value +')';
     });
 
-    // 选择本地图片
+    // // 选择本地图片
 
-    let select_local_image_btn = document.querySelector('#select-local-image');
-    select_local_image_btn.addEventListener('onchange', selectImage());
+    // let select_local_image_btn = document.querySelector('#select-local-image');
+    // select_local_image_btn.addEventListener('onchange', selectImage());
 
     //下载
 
@@ -58,6 +57,7 @@ window.onload = function() {
     };
 }
 
+
 function selectImage(fileDOM) {
     var file = fileDOM.files[0], // 获取文件
         imageType = /^image\//,
@@ -85,3 +85,4 @@ function selectImage(fileDOM) {
     };
     reader.readAsDataURL(file);
 }
+
