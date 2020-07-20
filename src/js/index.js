@@ -1,6 +1,7 @@
-document.write("<script type='text/javascript' src='./js/html2canvas.js'></script>");
+document.write("<script type='text/javascript' src='html2canvas.js'></script>");
 
 window.onload = function() {
+    console.log('hello')
     let t1 = "2021/01/01 00:00:00";
     let dateEnd = new Date(t1);
     let dateBegin = new Date();
@@ -27,33 +28,12 @@ window.onload = function() {
     // 选择本地图片
 
     let select_local_image_btn = document.querySelector('#select-local-image');
-    select_local_image_btn.addEventListener('click', selectImage);
+    select_local_image_btn.addEventListener('onchange', selectImage());
 
-    // 下载
+    //下载
 
     let download_btn = document.querySelector('#download');
     download_btn.addEventListener('click', snapshoot);
-
-    let content = document.querySelector('.container');
-    let width = content.offsetWidth,//canvasContent.offsetWidth || document.body.clientWidth; //获取dom 宽度
-    height = content.offsetHeight;//canvasContent.offsetHeight; //获取dom 高度
-    // canvas = document.createElement("canvas"), //创建一个canvas节点
-    // scale = 4; //定义任意放大倍数 支持小数
-    // canvas.width = width * scale; //定义canvas 宽度 * 缩放
-    // canvas.height = height * scale; //定义canvas高度 *缩放
-    // canvas.style.width = content.offsetWidth * scale + "px";
-    // canvas.style.height = content.offsetHeight * scale + "px";
-    // canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
-    const scale = 2;
-    let opts = {
-        scale: scale, // 添加的scale 参数
-        // canvas: canvas, //自定义 canvas
-        logging: false, //日志开关，便于查看html2canvas的内部执行流程
-        // width: width, //dom 原始宽度
-        // height: height,
-        useCORS: true // 【重要】开启跨域配置
-    };
-
     function snapshoot(){
         html2canvas(content, opts).then(function(canvas){
            let imgUrl = canvas.toDataURL('image/png');
@@ -67,6 +47,15 @@ window.onload = function() {
            document.body.removeChild(dlLink);
         }) 
      }
+
+    let content = document.querySelector('.container');
+
+    const scale = 2;
+    let opts = {
+        scale: scale, // 添加的scale 参数
+        logging: false, //日志开关，便于查看html2canvas的内部执行流程
+        useCORS: true // 【重要】开启跨域配置
+    };
 }
 
 function selectImage(fileDOM) {

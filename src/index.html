@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>每日一图</title>
     <link rel="stylesheet" href="./index.css">
+    <script type='text/javascript' src='js/html2canvas.js' defer ></script>
+    <script type="text/javascript" src="js/index.js" defer></script>
 </head>
 <body>
    <div class="container">
@@ -32,13 +34,11 @@
 
        <div>
            <label> 选择本地图片: </label>
-           <input type="file" id="select-local-image"/>
+           <input type="file" id="select-local-image" onchange=selectImage(this) />
        </div>
 
        <button id="download">下载图片</button>
 
    </div>  
-
-   <script type="text/javascript" src="js/index.js" />
 </body>
 </html>
