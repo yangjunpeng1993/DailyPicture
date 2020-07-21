@@ -8,15 +8,18 @@
   src: url("fonts/HanaMinA.ttf") format("truetype");
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 .container {
@@ -24,7 +27,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: calc(100vw * 500 / 960);
   position: relative;
 }
 
@@ -34,7 +37,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 102px 96px;
+  padding: 1rem 0.6rem;
   background-color: rgba(2, 3, 5, 0.15);
 }
 
@@ -42,55 +45,121 @@ body {
   text-align: center;
   font-family: 'Kai','HanaMinA';
   font-weight: bold;
-  font-size: 60px;
+  font-size: 0.6rem;
   letter-spacing: 3px;
   color: #ffffff;
 }
 
 .container .cover .time span {
-  font-size: 80px;
+  font-size: 0.8rem;
 }
 
 .container .cover .subcontent {
   display: block;
-  margin-top: 40px;
+  margin-top: 0.4rem;
   width: 100%;
   text-align: center;
 }
 
 .container .cover .subcontent span {
-  padding: 10px 25px;
+  padding: 0.1rem 0.25rem;
   text-align: center;
   font-family: 'Kai','Heiti SC';
-  font-size: 28px;
+  font-size: 0.28rem;
   letter-spacing: 4px;
   background-color: #ffcc01;
   color: #555555;
 }
 
 .input-view {
-  margin-top: 20px;
+  margin-top: 0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 0.3rem;
+}
+
+.input-view .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .input-view label {
-  margin-left: 10px;
+  margin-left: 0.1rem;
+  font-size: 0.16rem;
 }
 
 .input-view input {
-  width: 200px;
-  margin-left: 10px;
+  width: 2rem;
+  margin-left: 0.1rem;
+}
+
+.input-view input[type="text"], .input-view input[type="url"] {
+  border: 1px solid black;
+}
+
+.input-view input[type="file"] {
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 .input-view button {
-  font-size: 14px;
-  background-color: white;
-  border: 1px solid;
-  padding: 4px;
+  font-size: 0.16rem;
+  -webkit-box-shadow: 1px 1px 3px #ccc;
+          box-shadow: 1px 1px 3px #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.input-view label[for="file-input"] {
+  display: inline-block;
+  vertical-align: center;
+  -webkit-box-shadow: 1px 1px 3px #ccc;
+          box-shadow: 1px 1px 3px #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.input-view label[for="file-input"]:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+.input-view label[for="file"]:active {
+  -webkit-box-shadow: inset 1px 1px 3px #ccc;
+          box-shadow: inset 1px 1px 3px #ccc;
+}
+
+@media (min-width: 960px) {
+  .container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container .cover {
+    padding: 1rem 0.4rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

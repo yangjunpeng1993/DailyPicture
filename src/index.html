@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>每日一图</title>
     <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="js/scale.js" async></script>
     <script type='text/javascript' src='js/html2canvas.js' defer ></script>
     <script type="text/javascript" src="js/index.js" defer></script>
 </head>
@@ -21,20 +22,20 @@
    </div> 
 
    <div class="input-view">
-       <div>
+       <div class="input-div">
             <label for="content">句子</label>
             <input class="input-content" type="text" />
        </div>
 
-       <div>
+       <div class="input-div">
             <label for="img">图片链接</label>
-            <input class="input-img-url" type="text" />
+            <input class="input-img-url" type="url" />
        </div>
 
 
-       <div>
-           <label> 选择本地图片: </label>
-           <input type="file" id="select-local-image" onchange=selectImage(this) />
+       <div class="input-div">
+           <label for="file-input"> 选择本地图片 </label>
+           <input type="file" id="file-input" onchange=selectImage(this) />
        </div>
 
        <button id="download">下载图片</button>

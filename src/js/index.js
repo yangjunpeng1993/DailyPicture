@@ -1,4 +1,12 @@
-document.write("<script type='text/javascript' src='html2canvas.js'></script>");
+window.onresize = function() {
+    console.log('resize');
+    location.reload();
+}
+
+window.addEventListener("orientationchange", function() {
+    window.console.log("旋转");
+    location.reload();
+}, false);
 
 window.onload = function() {
     let t1 = "2021/01/01 00:00:00";
